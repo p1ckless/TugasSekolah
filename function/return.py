@@ -2,8 +2,12 @@
 pendapatan = 2000000
 saldoPerusahaan = 5000000
 
-def tambahPendapatan(saldoAwal, tambahSaldo):
+def tambahSaldo(saldoAwal, tambahSaldo):
   saldoAwal += tambahSaldo
+  return saldoAwal
+  
+def kurangSaldo(saldoAwal, kurangSaldo):
+  saldoAwal -= kurangSaldo
   return saldoAwal
 
 def salamPembuka(namaAdmin, namaPerusahaan):
@@ -12,15 +16,18 @@ def salamPembuka(namaAdmin, namaPerusahaan):
   print(f"Selamat datang Di {namaPerusahaan}")
   print("===========================")
   print(f"Hello, {namaAdmin}")
-  user_input = input(f"Pendapatan Perusahaan kemarin sebesar Rp{pendapatan} \nApakah anda ingin menginput pendapatan hari ini? (Y/n)")
+  user_input = input(f"Pendapatan Perusahaan kemarin sebesar Rp{pendapatan} \nInput 1 jika ingin memasukkan saldo \nInput 2 jika ingin menarik saldo \nInput angka selain 1-2 untuk keluar!")
   
-  if user_input == "y":
-    pendapatan_baru = int(input("Silahkan masukkan pendapatan hari ini! :"))
-    
-    saldoPerusahaan = tambahPendapatan(saldoPerusahaan, pendapatan_baru)
-    
-    print(f"Pendapatan hari ini sebesar Rp{pendapatan_baru} \n Saldo perusahaan sekarang adalah Rp{saldoPerusahaan}")
+  if user_input == "1":
+    saldo_baru = int(input("Silahkan masukkan pendapatan hari ini! :"))
+    saldoPerusahaan = tambahSaldo(saldoPerusahaan, saldo_baru)
+    print(f"Pendapatan hari ini sebesar Rp{saldo_baru} \nSaldo perusahaan sekarang adalah Rp{saldoPerusahaan}")
   
+  elif user_input == "2":
+    pengurangan_saldo = int(input("Silahkan masukkan jumlah saldo yang ingin ditarik! :"))
+    saldoPerusahaan = kurangSaldo(saldoPerusahaan, pengurangan_saldo)
+    print(f"Saldo berhasil ditarik sebesar Rp{pengurangan_saldo}, jumlah saldo sekarang adalah Rp{saldoPerusahaan}")
+    
   else:
    print("Saldo hari ini belum direkap")
 
