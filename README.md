@@ -1,11 +1,11 @@
 # About
 ```bash
-cuman upload tugas sekolah
-update kalau disuruh 😂
+- tugas sekolah yang gua pelajari/kerjakan upload disini 
+- update kalau ada 
 ```
 # Note 
 ```bash
-maaf kalau berantakan codenya
-masih pemula, diusahakan untuk lebuh baik
+- maaf kalau berantakan codenya
+- masih pemula, diusahakan untuk lebih baik
 ```
 
