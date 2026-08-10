@@ -4,8 +4,6 @@
 - update kalau ada 
 ```
 # Note 
-```bash
-- maaf kalau berantakan codenya
-- masih pemula, diusahakan untuk lebih baik
-```
+- maaf kalau berantakan codenya, masih pemula.
+ diusahakan untuk lebih baik.
 
