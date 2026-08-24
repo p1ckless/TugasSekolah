@@ -1,0 +1,19 @@
+<html>
+<head>
+<script type="text/javascript">
+function cekumur() {
+    var age = document.kontrol.umur.value;
+    if (parseInt(age) > 18) {
+        document.getElementById("hasil").innerHTML = "<b>Umur di atas 18 tahun</b>";
+    }
+}
+</script>
+</head>
+<body>
+<form name="kontrol" method="post">
+Input Umur: <input type="text" name="umur">
+<input type="button" value="Cek Umur" onclick="cekumur()">
+</form>
+<p id="hasil"></p>
+</body>
+</html>

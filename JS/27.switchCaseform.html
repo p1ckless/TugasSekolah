@@ -1,0 +1,24 @@
+<html>
+<head>
+<script type="text/javascript">
+function cekgrade() {
+    var grade = document.kontrol.grade.value;
+    switch (grade) {
+        case 'A': document.getElementById("hasil").innerHTML = "<b>Baik Sekali</b>"; break;
+        case 'B': document.getElementById("hasil").innerHTML = "<b>Baik</b>"; break;
+        case 'C': document.getElementById("hasil").innerHTML = "<b>Cukup</b>"; break;
+        case 'D': document.getElementById("hasil").innerHTML = "<b>Kurang</b>"; break;
+        case 'E': document.getElementById("hasil").innerHTML = "<b>Kurang Sekali</b>"; break;
+        default: document.getElementById("hasil").innerHTML = "<b>Nilai Grade Salah</b>";
+    }
+}
+</script>
+</head>
+<body>
+<form name="kontrol" method="post">
+Input Grade: <input type="text" name="grade">
+<input type="button" value="Cek Grade" onclick="cekgrade()">
+</form>
+<p id="hasil"></p>
+</body>
+</html>

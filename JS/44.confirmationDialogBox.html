@@ -1,0 +1,21 @@
+<html>
+<head>
+<script type="text/javascript">
+function getConfirmation() {
+    var retVal = confirm("Proses mau dilanjutkan ?");
+    if (retVal == true) {
+        document.write("Proses telah dilanjutkan...!!!");
+        return true;
+    } else {
+        document.write("Proses dibatalkan...!!!");
+        return false;
+    }
+}
+</script>
+</head>
+<body>
+<form>
+<input type="button" value="Klik disini" onclick="getConfirmation();" />
+</form>
+</body>
+</html>

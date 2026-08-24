@@ -1,0 +1,39 @@
+<html>
+<head>
+<script type="text/javascript">
+var num = 77.1234;
+
+function NExponential() {
+    document.write("Exponensial: " + num.toExponential() + "<br>");
+    document.write("Exponensial 2: " + num.toExponential(2));
+}
+function NFixed() {
+    document.write("Fixed: " + num.toFixed() + "<br>"); 
+    document.write("Fixed 2: " + num.toFixed(2));
+}
+function NLocaleString() {
+    document.write("Locale String: " + num.toLocaleString());
+}
+function NPrecision() {
+    document.write("Precision: " + num.toPrecision() + "<br>"); 
+    document.write("Precision 2: " + num.toPrecision(2));
+}
+function NString() {
+    var numb = new Number(15);
+    document.write("String: " + numb.toString() + "<br>"); 
+    document.write("String 2: " + numb.toString(2));
+}
+function NValueOf() {
+    document.write("Value Of: " + num.valueOf());
+}
+</script>
+</head>
+<body>
+<input type="button" onclick="NExponential()" value="Exponential" />
+<input type="button" onclick="NFixed()" value="Fixed" />
+<input type="button" onclick="NLocaleString()" value="Locale String" />
+<input type="button" onclick="NPrecision()" value="Precision" />
+<input type="button" onclick="NString()" value="String" />
+<input type="button" onclick="NValueOf()" value="Value Of" />
+</body>
+</html>

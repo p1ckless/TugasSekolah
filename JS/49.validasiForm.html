@@ -1,0 +1,30 @@
+<html>
+<head>
+<script type="text/javascript">
+function CekForm(theForm) {
+    if (theForm.fnama.value == "") {
+        alert("Ketikkan nama anda!");
+        theForm.fnama.focus();
+        return false;
+    } else if (theForm.falamat.value == "") {
+        alert("Ketikkan alamat anda!");
+        theForm.falamat.focus();
+        return false;
+    }
+    return true;
+}
+</script>
+</head>
+<body>
+<form id="FDaftar" name="FDaftar" method="post" onsubmit="return CekForm(this);">
+<p>
+Nama: <input name="fnama" type="text" id="fnama" size="30" maxlength="30" /><br />
+Alamat: <textarea name="falamat" cols="30" rows="3" id="falamat"></textarea>
+</p>
+<p>
+<input type="submit" name="btnKirim" id="btnKirim" value="Kirim" />
+<input type="reset" name="btnReset" id="btnReset" value="Reset" />
+</p>
+</form>
+</body>
+</html>

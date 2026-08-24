@@ -1,0 +1,62 @@
+<html>
+<head>
+<script type="text/javascript">
+function penjumlahan() {
+    var a = document.aritmatik.nilai1.value; 
+    var b = document.aritmatik.nilai2.value; 
+    var c = parseInt(a) + parseInt(b);
+    document.getElementById("hasil").innerHTML = a + " + " + b + " = " + c;
+}
+function pengurangan() {
+    var a = document.aritmatik.nilai1.value; 
+    var b = document.aritmatik.nilai2.value; 
+    var c = parseInt(a) - parseInt(b);
+    document.getElementById("hasil").innerHTML = a + " - " + b + " = " + c;
+}
+function pembagian() {
+    var a = document.aritmatik.nilai1.value; 
+    var b = document.aritmatik.nilai2.value; 
+    var c = parseInt(a) / parseInt(b);
+    document.getElementById("hasil").innerHTML = a + " / " + b + " = " + c;
+}
+function perkalian() {
+    var a = document.aritmatik.nilai1.value; 
+    var b = document.aritmatik.nilai2.value; 
+    var c = parseInt(a) * parseInt(b);
+    document.getElementById("hasil").innerHTML = a + " * " + b + " = " + c;
+}
+function modulus() {
+    var a = document.aritmatik.nilai1.value; 
+    var b = document.aritmatik.nilai2.value; 
+    var c = parseInt(a) % parseInt(b);
+    document.getElementById("hasil").innerHTML = a + " % " + b + " = " + c;
+}
+function increments() {
+    var a = document.aritmatik.nilai1.value; 
+    var c = parseInt(a);
+    c++;
+    document.getElementById("hasil").innerHTML = a + "++ = " + c;
+}
+function decrements() {
+    var a = document.aritmatik.nilai1.value; 
+    var c = parseInt(a);
+    c--;
+    document.getElementById("hasil").innerHTML = a + "-- = " + c;
+}
+</script>
+</head>
+<body>
+<form name="aritmatik" method="post">
+Nilai 1: <input type="text" name="nilai1"><br>
+Nilai 2: <input type="text" name="nilai2"><br>
+<input type="button" onclick="penjumlahan()" value="+"> 
+<input type="button" onclick="pengurangan()" value="-">
+<input type="button" onclick="pembagian()" value="/">
+<input type="button" onclick="perkalian()" value="*">
+<input type="button" onclick="modulus()" value="%">
+<input type="button" onclick="increments()" value="++">
+<input type="button" onclick="decrements()" value="--">
+</form>
+<p id="hasil"></p>
+</body>
+</html>

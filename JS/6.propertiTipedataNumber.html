@@ -1,0 +1,27 @@
+<html>
+<head>
+<script type="text/javascript">
+function MaxValue() {
+    var val = Number.MAX_VALUE; 
+    document.write("Nilai Maksimal MAX_VALUE: " + val);
+}
+function MinValue() {
+    var val = Number.MIN_VALUE; 
+    document.write("Nilai Minimal MIN_VALUE: " + val);
+}
+function NanValue() {
+    var dayOfMonth = 50;
+    if (dayOfMonth < 1 || dayOfMonth > 31) {
+        dayOfMonth = Number.NaN; 
+        alert("Nilai hari dalam 1 bulan harus antara 1 dan 31.");
+    }
+    document.write("Nilai hari dalam 1 bulan: " + dayOfMonth);
+}
+</script>
+</head>
+<body>
+<input type="button" onclick="MaxValue()" value="Nilai Maksimal" />
+<input type="button" onclick="MinValue()" value="Nilai Minimal" />
+<input type="button" onclick="NanValue()" value="Nilai NaN" />
+</body>
+</html>

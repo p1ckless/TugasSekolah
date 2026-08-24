@@ -1,0 +1,54 @@
+<html>
+<head>
+<script type="text/javascript">
+function band() {
+    var a = document.aritmatik.nilai1.value; 
+    var b = document.aritmatik.nilai2.value; 
+    var c = parseInt(a) & parseInt(b);
+    document.getElementById("hasil").innerHTML = a + " & " + b + " hasilnya " + c;
+}
+function bor() {
+    var a = document.aritmatik.nilai1.value; 
+    var b = document.aritmatik.nilai2.value; 
+    var c = parseInt(a) | parseInt(b);
+    document.getElementById("hasil").innerHTML = a + " | " + b + " hasilnya " + c;
+}
+function bxor() {
+    var a = document.aritmatik.nilai1.value; 
+    var b = document.aritmatik.nilai2.value; 
+    var c = parseInt(a) ^ parseInt(b);
+    document.getElementById("hasil").innerHTML = a + " ^ " + b + " hasilnya " + c;
+}
+function bnot() {
+    var a = document.aritmatik.nilai1.value; 
+    var c = ~parseInt(a);
+    document.getElementById("hasil").innerHTML = "~" + a + " hasilnya " + c;
+}
+function bkiri() {
+    var a = document.aritmatik.nilai1.value; 
+    var b = document.aritmatik.nilai2.value; 
+    var c = parseInt(a) << parseInt(b);
+    document.getElementById("hasil").innerHTML = a + " << " + b + " hasilnya " + c;
+}
+function bkanan() {
+    var a = document.aritmatik.nilai1.value; 
+    var b = document.aritmatik.nilai2.value; 
+    var c = parseInt(a) >> parseInt(b);
+    document.getElementById("hasil").innerHTML = a + " >> " + b + " hasilnya " + c;
+}
+</script>
+</head>
+<body>
+<form name="aritmatik" method="post">
+Nilai 1: <input type="text" name="nilai1"><br>
+Nilai 2: <input type="text" name="nilai2"><br>
+<input type="button" onclick="band()" value="&">
+<input type="button" onclick="bor()" value="|">
+<input type="button" onclick="bxor()" value="^">
+<input type="button" onclick="bnot()" value="~">
+<input type="button" onclick="bkiri()" value="<<">
+<input type="button" onclick="bkanan()" value=">>">
+</form>
+<p id="hasil"></p>
+</body>
+</html>

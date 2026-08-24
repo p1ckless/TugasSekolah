@@ -1,0 +1,81 @@
+<html>
+<head>
+<script type="text/javascript">
+var str = "Ini adalah contoh String";
+
+function SLength() {
+    document.write("Length: " + str.length);
+}
+function SCharAt() {
+    document.write("Char At 0: " + str.charAt(0) + "<br>"); 
+    document.write("Char At 2: " + str.charAt(2) + "<br>");
+    document.write("Char Code At 0: " + str.charCodeAt(0) + "<br>");
+    document.write("Char Code At 2: " + str.charCodeAt(2));
+}
+function SConcat() {
+    var s0 = ""; 
+    var s1 = "Ini "; 
+    var s2 = "contoh "; 
+    var s3 = "String";
+    document.write("Concat: " + s0.concat(s1, s2, s3));
+}
+function SIndexOf() {
+    document.write("Index Of: " + str.indexOf("contoh") + "<br>");
+    document.write("Last Index Of: " + str.lastIndexOf("contoh"));
+}
+function SLocaleCompare() {
+    document.write("Locale Compare: " + str.localeCompare("Ini adalah contoh String") + "<br>");
+    document.write("Locale Compare: " + str.localeCompare("ABCD") + "<br>");
+    document.write("Locale Compare: " + str.localeCompare("WXYZ"));
+}
+function SMatch() {
+    var kalimat = "1 ditambah 2 sama dengan 3"; 
+    document.write("Match: " + kalimat.match(/\d+/g));
+}
+function SReplace() {
+    document.write("Replace: " + str.replace("contoh", "metode"));
+}
+function SSearch() {
+    if (str.search("JavaScript") == -1) {
+        document.write("Tidak terdapat kata JavaScript");
+    } else {
+        document.write("Terdapat kata JavaScript");
+    }
+}
+function SSlice() {
+    document.write("Slice: " + str.slice(3, -2));
+}
+function SSplit() {
+    document.write("Split: " + str.split(" ", 3));
+}
+function SSubstr() {
+    document.write("Substr: " + str.substr(1, 2) + "<br>"); 
+    document.write("Substr: " + str.substr(-2, 2) + "<br>");
+    document.write("Substr: " + str.substr(1) + "<br>"); 
+    document.write("Substring: " + str.substring(1, 2) + "<br>");
+    document.write("Substring: " + str.substring(0, 10) + "<br>"); 
+    document.write("Substring: " + str.substring(5));
+}
+function SCase() {
+    document.write("Locale Lower Case: " + str.toLocaleLowerCase() + "<br>");
+    document.write("Locale Upper Case: " + str.toLocaleUpperCase() + "<br>");
+    document.write("Lower Case: " + str.toLowerCase() + "<br>");
+    document.write("Upper Case: " + str.toUpperCase());
+}
+</script>
+</head>
+<body>
+<input type="button" onclick="SLength()" value="Length" />
+<input type="button" onclick="SCharAt()" value="Char At" />
+<input type="button" onclick="SConcat()" value="Concat" />
+<input type="button" onclick="SIndexOf()" value="Index Of" />
+<input type="button" onclick="SLocaleCompare()" value="Locale Compare" />
+<input type="button" onclick="SMatch()" value="Match" />
+<input type="button" onclick="SReplace()" value="Replace" />
+<input type="button" onclick="SSearch()" value="Search" />
+<input type="button" onclick="SSlice()" value="Slice" />
+<input type="button" onclick="SSplit()" value="Split" />
+<input type="button" onclick="SSubstr()" value="Substr" />
+<input type="button" onclick="SCase()" value="Case" />
+</body>
+</html>

@@ -1,0 +1,55 @@
+<html>
+<head>
+<script type="text/javascript">
+function samadengan() {
+    var a = document.aritmatik.nilai1.value; 
+    var b = document.aritmatik.nilai2.value;
+    var c = parseInt(a) == parseInt(b);
+    document.getElementById("hasil").innerHTML = a + " == " + b + " hasilnya " + c;
+}
+function lebihkecil() {
+    var a = document.aritmatik.nilai1.value; 
+    var b = document.aritmatik.nilai2.value;
+    var c = parseInt(a) < parseInt(b);
+    document.getElementById("hasil").innerHTML = a + " < " + b + " hasilnya " + c;
+}
+function lebihbesar() {
+    var a = document.aritmatik.nilai1.value; 
+    var b = document.aritmatik.nilai2.value; 
+    var c = parseInt(a) > parseInt(b);
+    document.getElementById("hasil").innerHTML = a + " > " + b + " hasilnya " + c;
+}
+function tidaksamadengan() {
+    var a = document.aritmatik.nilai1.value; 
+    var b = document.aritmatik.nilai2.value; 
+    var c = parseInt(a) != parseInt(b);
+    document.getElementById("hasil").innerHTML = a + " != " + b + " hasilnya " + c;
+}
+function lebihbesarsamadengan() {
+    var a = document.aritmatik.nilai1.value; 
+    var b = document.aritmatik.nilai2.value; 
+    var c = parseInt(a) >= parseInt(b);
+    document.getElementById("hasil").innerHTML = a + " >= " + b + " hasilnya " + c;
+}
+function lebihkecilsamadengan() {
+    var a = document.aritmatik.nilai1.value; 
+    var b = document.aritmatik.nilai2.value; 
+    var c = parseInt(a) <= parseInt(b);
+    document.getElementById("hasil").innerHTML = a + " <= " + b + " hasilnya " + c;
+}
+</script>
+</head>
+<body>
+<form name="aritmatik" method="post">
+Nilai 1: <input type="text" name="nilai1"><br>
+Nilai 2: <input type="text" name="nilai2"><br>
+<input type="button" onclick="samadengan()" value="==">
+<input type="button" onclick="lebihkecil()" value="<">
+<input type="button" onclick="lebihbesar()" value=">">
+<input type="button" onclick="tidaksamadengan()" value="!=">
+<input type="button" onclick="lebihbesarsamadengan()" value=">=">
+<input type="button" onclick="lebihkecilsamadengan()" value="<=">
+</form>
+<p id="hasil"></p>
+</body>
+</html>

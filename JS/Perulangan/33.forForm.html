@@ -1,0 +1,19 @@
+<html>
+<head>
+<script type="text/javascript">
+function perulangan() {
+    var angka;
+    for (angka = parseInt(document.kontrol.angka.value); angka < 10; angka++) {
+        document.write("Nilai yang ditampilkan: " + angka + "<br />");
+    }
+}
+</script>
+</head>
+<body>
+<form name="kontrol" method="post">
+Input Angka: <input type="text" name="angka">
+<input type="button" value="Proses" onclick="perulangan()">
+</form>
+<p id="hasil"></p>
+</body>
+</html>
