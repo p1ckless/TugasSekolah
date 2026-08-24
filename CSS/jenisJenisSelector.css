@@ -1,0 +1,12 @@
+/* A. Tag Selector */
+h1 {color: #36CFFF;}
+
+/* B. Universal Selector */
+* {color: #36CFFF;}
+
+/* C. Descendant Selector */
+ul em {color: #36CFFF;}
+
+/* D. Class Selector */
+.hitam {color: #000000;}
+h1.hitam {color: #000000;}

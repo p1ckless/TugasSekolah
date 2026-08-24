@@ -1,0 +1,238 @@
+HTML
+<!-- Contoh Dasar Sintaks CSS & HTML -->
+<html>
+<head>
+    <title>CSS Guide</title>
+    <style type="text/css">
+        h1 {color: red; font-family: "arial";}
+        table {border: 1px solid #C00;}
+    </style>
+</head>
+<body>
+    <h1>Ini adalah heading 1</h1>
+    <p>Ini adalah paragraf. Ini adalah paragraf. Ini adalah paragraf. Ini adalah paragraf. Ini adalah paragraf. Ini adalah paragraf. Ini adalah paragraf.</p>
+</body>
+</html>
+Halaman 90 — Jenis-Jenis Selector CSS
+
+CSS
+/* A. Tag Selector */
+h1 {color: #36CFFF;}
+
+/* B. Universal Selector */
+* {color: #36CFFF;}
+
+/* C. Descendant Selector */
+ul em {color: #36CFFF;}
+
+/* D. Class Selector */
+.hitam {color: #000000;}
+h1.hitam {color: #000000;}
+Halaman 100 — Properti Font (Ketebalan, Ukuran, Rentang)
+
+HTML
+<!-- 5. Font-size & Font-weight -->
+<p style="font-weight:bold;">Font pada paragraf ini bold</p>
+<p style="font-weight:bolder;">Font pada paragraf ini bolder</p>
+<p style="font-weight:900;">Font pada paragraf ini memiliki ketebalan 900</p>
+
+<p style="font-size:20px;">Font pada paragraf ini memiliki ukuran 20px</p>
+<p style="font-size:small;">Font pada paragraf ini memiliki ukuran small</p>
+<p style="font-size:large;">Font pada paragraf ini memiliki ukuran large</p>
+
+<!-- 6. Font-size-adjust & 7. Font-stretch -->
+<p style="font-size-adjust:0.61;">Teks ini menggunakan font size adjust</p>
+<p style="font-stretch:ultra-expanded;">Teks ini menggunakan font stretch</p>
+Halaman 101 — Properti Teks (Font, Warna, Spasi)
+
+HTML
+<!-- 8. Font (Shorthand) -->
+<p style="font:italic small-caps bold 15px georgia;">Paragraf ini menggunakan font Georgia dengan style italic tebal, ukuran 15px dan huruf besar</p>
+
+<!-- C. Text Manipulation -->
+<!-- 1. Color -->
+<p style="color:red;">Teks ini berwarna merah</p>
+
+<!-- 2. Direction -->
+<p style="direction:rtl;">Teks ini ditampilkan dari kiri ke kanan</p>
+
+<!-- 3. Letter-spacing -->
+<p style="letter-spacing:5px;">Teks ini memiliki 5px ruang kosong untuk setiap karakternya</p>
+
+<!-- 4. Word-spacing -->
+<p style="word-spacing:5px;">Teks ini memiliki 5px ruang kosong untuk setiap kata</p>
+
+<!-- 5. Text-indent -->
+<p style="text-indent:1cm;">Paragraf ini menjorok sebesar 1cm pada baris pertamanya</p>
+Halaman 102 — Penataan Teks (Alignment, Decoration, Transform, White-space)
+
+HTML
+<!-- 6. Text-align -->
+<p style="text-align:right;">Teks ini berada di posisi kanan</p>
+<p style="text-align:center;">Teks ini berada di posisi tengah</p>
+<p style="text-align:left;">Teks ini berada di posisi sebelah kiri</p>
+
+<!-- 7. Text-decoration -->
+<p style="text-decoration:underline;">Teks ini memiliki garis bawah</p>
+<p style="text-decoration:line-through;">Teks ini memiliki garis tengah / tercoret</p>
+<p style="text-decoration:blink;">Teks ini memiliki efek berkedip</p>
+
+<!-- 8. Text-transform -->
+<p style="text-transform:capitalize;">semua huruf awal kata akan berubah menjadi huruf besar</p>
+<p style="text-transform:uppercase;">semua huruf akan berubah menjadi huruf besar</p>
+<p style="text-transform:lowercase;">Semua Huruf Akan Berubah Menjadi Huruf Kecil</p>
+
+<!-- 9. White-space -->
+<p style="white-space:pre;">Teks ini akan menambahkan 1 baris baru yang kosong untuk setiap baris kalimat yang dibuat</p>
+Halaman 103 — Efek Teks & Gambar (Shadow, Border, Height, Opacity)
+
+HTML
+<!-- 10. Text-shadow -->
+<p style="text-shadow:4px 4px 8px blue;">Jika browser Anda mendukung CSS maka tulisan ini akan menampilkan bayangan berwarna biru</p>
+
+<!-- D. Image Control -->
+<!-- 1. Border -->
+<img style="border:3px dashed red;" src="/images/css.gif" />
+
+<!-- 2. Height -->
+<img style="border:1px solid red; height:100px;" src="/images/css.gif" /><br />
+<img style="border:1px solid red; height:50%;" src="/images/css.gif" />
+
+<!-- 3. Width -->
+<img style="border:1px dotted red; width:100px;" src="/images/css.gif" /><br />
+<img style="border:1px dotted red; width:50%;" src="/images/css.gif" />
+
+<!-- 4. -moz-opacity (Transparansi) -->
+<img style="border:3px solid red; -moz-opacity:0.4; filter:alpha(opacity=40);" src="/images/css.gif" />
+Halaman 104 — Pseudo-class pada Link
+
+HTML
+<!-- E. Link Control -->
+<!-- 1. :link & 2. :visited -->
+<style type="text/css">
+    a:link {color:#000000;}
+    a:visited {color:#006600;}
+</style>
+<a href="/html/index.htm">Tautan berwarna hitam</a>
+<a href="/html/index.htm">Klik tautan ini</a>
+
+<!-- 3. :hover -->
+<style type="text/css">
+    a:hover {color:#FFCC00;}
+</style>
+<a href="/html/index.htm">Arahkan mouse ke atas tautan ini</a>
+Halaman 105 — Active Link & Tabel (Border-collapse)
+
+HTML
+<!-- 4. :active -->
+<style type="text/css">
+    a:active {color:#FFCCFF;}
+</style>
+<a href="/html/index.htm">Klik tautan ini</a>
+
+<!-- F. Table Control -->
+<!-- 1. Border-collapse -->
+<style type="text/css">
+    table.one {border-collapse:collapse;}
+    table.two {border-collapse:separate;}
+    td.a {border-style:solid; border-width:3px; border-color:#000000; padding:10px;}
+    td.b {border-style:solid; border-width:3px; border-color:#333333; padding:10px;}
+</style>
+
+<table class="one">
+    <caption>Contoh garis tepi collapse</caption>
+    <tr>
+        <td class="a">Contoh Collapse pada kolom A</td>
+        <td class="b">Contoh Collapse pada kolom B</td>
+    </tr>
+</table>
+
+<table class="two">
+    <caption>Contoh garis tepi separate</caption>
+    <tr>
+        <td class="a">Contoh Separate pada kolom A</td>
+        <td class="b">Contoh Separate pada kolom B</td>
+    </tr>
+</table>
+Halaman 106 — Tabel (Border-spacing & Caption-side)
+
+HTML
+<!-- 2. Border-spacing -->
+<style type="text/css">
+    table.one {border-collapse:separate; width:400px; border-spacing:10px;}
+    table.two {border-collapse:separate; width:400px; border-spacing:10px 50px;}
+</style>
+
+<table class="one" border="1">
+    <caption>Contoh garis tepi dengan spasi</caption>
+    <tr>
+        <td>Contoh Separate pada kolom A</td>
+        <td>Contoh Separate pada kolom B</td>
+    </tr>
+</table>
+<br />
+<table class="two" border="1">
+    <caption>Contoh garis tepi dengan spasi</caption>
+    <tr>
+        <td>Contoh Separate pada kolom A</td>
+        <td>Contoh Separate pada kolom B</td>
+    </tr>
+</table>
+
+<!-- 3. Caption-side -->
+<style type="text/css">
+    caption.top {caption-side:top}
+    caption.bottom {caption-side:bottom}
+    caption.left {caption-side:left}
+    caption.right {caption-side:right}
+</style>
+<table style="width:400px; border:1px solid black;">
+    <caption class="top">Judul ini berada di atas</caption>
+    <tr>
+        <td>Kolom A</td>
+        <td>Kolom B</td>
+    </tr>
+</table>
+Halaman 108 — Layout Tabel (Empty-cells & Table-layout)
+
+HTML
+<!-- 4. Empty-cells -->
+<style type="text/css">
+    table.empty {width:350px; border-collapse:separate; empty-cells:hide;}
+    td.empty {padding:5px; border-style:solid; border-width:1px; border-color:#999999;}
+</style>
+
+<table class="empty">
+    <tr>
+        <th>Judul 1</th>
+        <th>&nbsp;</th>
+        <th>Judul Baris</th>
+    </tr>
+    <tr>
+        <td class="empty">1</td>
+        <td class="empty">2</td>
+        <td class="empty">3</td>
+    </tr>
+</table>
+
+<!-- 5. Table-layout -->
+<style type="text/css">
+    table.auto {table-layout: auto}
+    table.fixed {table-layout: fixed}
+</style>
+
+<table class="auto" border="1" width="100%">
+    <tr>
+        <td width="20%">1000000000000000000000000000</td>
+        <td width="40%">100000000</td>
+        <td width="40%">100</td>
+    </tr>
+</table>
+<br />
+<table class="fixed" border="1" width="100%">
+    <tr>
+        <td width="20%">1000000000000000000000000000</td>
+        <td width="40%">100000000</td>
+        <td width="40%">100</td>
+    </tr>
+</table>
