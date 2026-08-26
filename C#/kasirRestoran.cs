@@ -1,7 +1,7 @@
 int totalBayar = 0;
 string pilihan = " ";
 
-while (pilihan != "selesai")
+while (pilihan != "6")
 {
     Console.WriteLine("=== Menu Yang Tersedia ===");
     Console.WriteLine("1. Nasi Goreng, Rp15.000");
@@ -9,10 +9,12 @@ while (pilihan != "selesai")
     Console.WriteLine("3. Es Teh, Rp4.000");
     Console.WriteLine("4. Es Jeruk Hangat, Rp3.000");
     Console.WriteLine("5. Es Milo, Rp6.000");
+    Console.WriteLine("==========================");
+    Console.WriteLine("Masukkan nomor 6 untuk keluar dari program");
 
-    Console.Write("Masukkan pilihanmu / ketik 'selesai' untuk keluar dari program : ");
-    pilihan = Console.ReadLine().ToLower().Trim();
-    if (pilihan == "selesai")
+    Console.Write("Masukkan pilihanmu : ");
+    pilihan = Console.ReadLine().Trim();
+    if (pilihan == "6")
     {
         break;
     }
