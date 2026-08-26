@@ -50,13 +50,18 @@ while (pilihan != "selesai")
         Console.WriteLine("Masukkan nomor yang valid");
         continue;
     }
-    Console.Write("Masukkan jumlah pesanan kamu :");
+    Console.Write("Masukkan jumlah pesanan kamu : ");
     int jumlah_pesanan = int.Parse(Console.ReadLine());
     int total_bayar = jumlah_pesanan * harga_menu;
+    totalBayar += total_bayar;
 
-    Console.WriteLine("==================");
-    Console.WriteLine("Pesanan Kamu" + " " + nama_menu);
-    Console.WriteLine("Jumlah Pesanan Kamu" + " " + jumlah_pesanan);
+    Console.WriteLine("==========================================");
+    Console.WriteLine("Pesanan kamu adalah" + " " + nama_menu);
+    Console.WriteLine("Jumlah pesanan kamu" + " " + jumlah_pesanan);
     Console.WriteLine("Total Bayar" + " " + total_bayar);
-    Console.WriteLine("==================");
+    Console.WriteLine("==========================================");
 }
+
+Console.WriteLine("==========================================");
+Console.WriteLine("Total seluruh pembayaran mu adalah Rp:" + " " + totalBayar);
+Console.WriteLine("==========================================");
