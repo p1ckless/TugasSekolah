@@ -54,6 +54,12 @@ while (pilihan != "6")
     }
     Console.Write("Masukkan jumlah pesanan kamu : ");
     int jumlah_pesanan = int.Parse(Console.ReadLine());
+    while (jumlah_pesanan <= 0)
+    {
+        Console.WriteLine("Masukkan angka yang valid!");
+        Console.Write("Silahkan masukkan jumlah pesanan yang valid! : ");
+        jumlah_pesanan = int.Parse(Console.ReadLine());
+    }
     int total_bayar = jumlah_pesanan * harga_menu;
     totalBayar += total_bayar;
 
