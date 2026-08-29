@@ -19,7 +19,7 @@ require_once 'connection.php';
             <th>Alamat</th>
             <th>Dosen Pembimbing</th>
             <th>No. Telepon</th>
-            <th>Aksi</th>
+            <!-- <th>Aksi</th -->
         </tr>
         <?php
         $no = 1;
