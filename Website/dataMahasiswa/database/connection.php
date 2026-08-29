@@ -1,8 +1,7 @@
 <?php
-// connection.php — koneksi ke database MySQL (XAMPP)
 $host   = "localhost";
 $user   = "root";
-$pass   = "";          // default XAMPP: password kosong
+$pass   = "";          
 $dbname = "db_mahasiswa";
 
 $conn = mysqli_connect($host, $user, $pass, $dbname);
