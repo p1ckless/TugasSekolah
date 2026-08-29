@@ -19,7 +19,7 @@ require_once 'connection.php';
             <th>Alamat</th>
             <th>Dosen Pembimbing</th>
             <th>No. Telepon</th>
-            <!-- <th>Aksi</th -->
+            <th>Aksi</th>
         </tr>
         <?php
         $no = 1;
@@ -41,7 +41,7 @@ require_once 'connection.php';
                 // echo "<td>
                 //         <a href='edit.php?id=" . $row['id'] . "'>Edit</a> |
                 //         <a href='delete.php?id=" . $row['id'] . "' onclick=\"return confirm('Yakin hapus data ini?')\">Hapus</a>
-                //       </td>";
+                //     </td>";
                 echo "</tr>";
             }
         } else {

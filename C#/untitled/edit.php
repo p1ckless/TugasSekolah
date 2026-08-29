@@ -1,4 +1,4 @@
-<!-- <?php
+<?php
 /** @var mysqli $conn */
 require_once 'connection.php';
 
@@ -107,4 +107,4 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </form>
     </table>
 </body>
-</html> -->
+</html>
