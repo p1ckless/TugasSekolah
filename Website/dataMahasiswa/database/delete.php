@@ -1,4 +1,5 @@
 <?php
+/** @var mysqli $conn */
 require_once 'connection.php';
 
 if (isset($_GET['id'])) {

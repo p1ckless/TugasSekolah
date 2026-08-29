@@ -1,4 +1,7 @@
-<?php require_once 'connection.php'; ?>
+<?php 
+/** @var mysqli $conn */
+require_once 'connection.php'; 
+?>
 <html>
 <head>
     <title>Data Mahasiswa</title>
