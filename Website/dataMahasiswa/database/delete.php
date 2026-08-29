@@ -10,4 +10,5 @@ if (isset($_GET['id'])) {
 }
 
 header("Location: index.php");
-exit;
+exit; 
+?>

@@ -38,10 +38,10 @@ require_once 'connection.php';
                 echo "<td>" . htmlspecialchars($row['alamat']) . "</td>";
                 echo "<td>" . htmlspecialchars($row['dosen']) . "</td>";
                 echo "<td>" . htmlspecialchars($row['telp'] ?: '-') . "</td>";
-                echo "<td>
-                        <a href='edit.php?id=" . $row['id'] . "'>Edit</a> |
-                        <a href='delete.php?id=" . $row['id'] . "' onclick=\"return confirm('Yakin hapus data ini?')\">Hapus</a>
-                      </td>";
+                // echo "<td>
+                //         <a href='edit.php?id=" . $row['id'] . "'>Edit</a> |
+                //         <a href='delete.php?id=" . $row['id'] . "' onclick=\"return confirm('Yakin hapus data ini?')\">Hapus</a>
+                //       </td>";
                 echo "</tr>";
             }
         } else {

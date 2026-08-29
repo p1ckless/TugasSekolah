@@ -1,10 +1,10 @@
-<?php
+<!-- <?php
 /** @var mysqli $conn */
 require_once 'connection.php';
 
 $error = "";
 
-// Ambil data berdasarkan id di URL (?id=)
+
 if (!isset($_GET['id']) && $_SERVER['REQUEST_METHOD'] !== 'POST') {
     header("Location: index.php");
     exit;
@@ -107,4 +107,4 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </form>
     </table>
 </body>
-</html>
+</html> -->
