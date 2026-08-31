@@ -1,6 +1,6 @@
-CREATE DATABASE db_mahasiswaa;
+CREATE DATABASE db_mahasiswaP;
 
-USE db_mahasiswaa;
+USE db_mahasiswaP;
 
 CREATE TABLE mahasiswa (
   id INT(11) AUTO_INCREMENT PRIMARY KEY,
