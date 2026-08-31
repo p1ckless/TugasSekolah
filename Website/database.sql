@@ -11,4 +11,5 @@ CREATE TABLE mahasiswa (
   alamat VARCHAR(100),
   dosen_pembimbing VARCHAR(100),
   telp VARCHAR(20)
+  CHECK (CHAR_LENGHT(telp) BETWEEN 10 AND 12)
 );
