@@ -1,14 +1,15 @@
-CREATE DATABASE db_mahasiswaa;
+CREATE DATABASE db_mahasiswaP;
 
-USE db_mahasiswaa;
+USE db_mahasiswaP;
 
 CREATE TABLE mahasiswa (
   id INT(11) AUTO_INCREMENT PRIMARY KEY,
-  no_induk VARCHAR(20),
+  noinduk VARCHAR(20),
   nama VARCHAR(100),
   jk CHAR(1),
-  tgl_lahir DATE,
+  tgllahir DATE,
   alamat VARCHAR(100),
   dosen_pembimbing VARCHAR(100),
-  no_telepon VARCHAR(20)
+  telp VARCHAR(20)
+  CHECK (CHAR_LENGHT(telp) BETWEEN 10 AND 12)
 );
