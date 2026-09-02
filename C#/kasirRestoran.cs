@@ -1,6 +1,7 @@
 int totalBayar = 0;
 string pilihan = " ";
 
+
 while (pilihan != "6")
 {
     Console.WriteLine("=== Menu Yang Tersedia ===");
@@ -8,7 +9,7 @@ while (pilihan != "6")
     Console.WriteLine("2. Ayam Goreng, Rp12.000");
     Console.WriteLine("3. Es Teh, Rp4.000");
     Console.WriteLine("4. Es Jeruk Hangat, Rp3.000");
-    Console.WriteLine("5. Es Milo, Rp6.000");
+    Console.WriteLine("5. Teh Hangat, Rp4.000");
     Console.WriteLine("==========================");
     Console.WriteLine("Masukkan nomor 6 untuk keluar dari program");
 
@@ -44,8 +45,8 @@ while (pilihan != "6")
     }
     else if (nomor_menu == 5)
     {
-        nama_menu = "Es Milo";
-        harga_menu = 6000;
+        nama_menu = "Teh Hangat";
+        harga_menu = 4000;
     }
     else
     {
