@@ -19,11 +19,27 @@ namespace PBO
 
         public void tambahPasien () 
         {
-          Pasien pasienBaru = new Pasien();
-          pasienBaru.setData(nama, umur, diagnosa);
-          daftarPasien.Add(pasienBaru);
+          daftarPasien.Add(this);
         }
 
+        public static List<string> riwayat = new List<string>();
+      
+        public void riwayatPasien() 
+        {
+          riwayat.Add(diagnosa);
+          Console.WriteLine("Riwayat Pasien");
+
+          foreach (string diagnosa in riwayat) 
+          {
+            Console.WriteLine("- " + diagnosa);
+          }
+        }
+      
+       public string cariNama() 
+       {
+         return nama;
+       }
+      
         public void getData()
         {
             Console.WriteLine($"nama = {nama}, umur =  {umur}, diagnosa = {diagnosa}");
