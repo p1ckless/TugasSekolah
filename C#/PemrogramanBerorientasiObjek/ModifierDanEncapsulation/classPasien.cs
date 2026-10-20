@@ -17,7 +17,7 @@ namespace PBO
             this.diagnosa = diagnosa;
         }
 
-        public void tambahPasien () 
+        public void tambahPasien() 
         {
           daftarPasien.Add(this);
         }
@@ -42,7 +42,9 @@ namespace PBO
       
         public void getData()
         {
-            Console.WriteLine($"nama = {nama}, umur =  {umur}, diagnosa = {diagnosa}");
+            Console.WriteLine($"Nama : {nama}");
+            Console.WriteLine($"Umur : {umur}");
+            Console.WriteLine($"Diagnosa : {diagnosa}");
         }
     }
 }
