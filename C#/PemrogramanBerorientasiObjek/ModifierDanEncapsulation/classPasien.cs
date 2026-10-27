@@ -45,11 +45,11 @@ namespace PBO
          return nama;
        }
       
-        public void getData()
-        {
-            Console.WriteLine($"Nama : {nama}");
-            Console.WriteLine($"Umur : {umur}");
-            Console.WriteLine($"Diagnosa : {diagnosa}");
-        }
+       public void getData() 
+       {
+         Console.WriteLine($"Nama: {nama}");
+         Console.WriteLine($"Umur: {umur}");
+         Console.WriteLine($"Diagnosa: {diagnosa}");
+       }
     }
 }
