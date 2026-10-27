@@ -15,6 +15,12 @@ namespace PBO
             this.nama = nama;
             this.umur = umur;
             this.diagnosa = diagnosa;
+            string[] listDiagnosa = diagnosa.Split(",");
+
+            foreach(string item in listDiagnosa) 
+            {
+              riwayat.Add(item.Trim());
+            }
         }
 
         public void tambahPasien() 
@@ -22,11 +28,10 @@ namespace PBO
           daftarPasien.Add(this);
         }
 
-        public static List<string> riwayat = new List<string>();
+        public List<string> riwayat = new List<string>();
       
         public void riwayatPasien() 
         {
-          riwayat.Add(diagnosa);
           Console.WriteLine("Riwayat Pasien");
 
           foreach (string diagnosa in riwayat) 
