@@ -50,10 +50,13 @@ VALUES ("K001", "Standart", 500000, "Terisi"),
 ("K003", "Suite", 1000000, "Tersedia"),
 ("K004", "Suite", 1000000, "Dibersihkan");
 
-INSERT INTO pembayaran (id_pembayaran, status_pembayaran, tanggal_pembayaran, total_bayar) VALUES ("PB001", "Lunas", "2026-08-14", 1000000),("PB002", "Lunas", "2026-08-15", 500000),
+INSERT INTO pembayaran (id_pembayaran, status_pembayaran, tanggal_pembayaran, total_bayar) 
+VALUES ("PB001", "Lunas", "2026-08-14", 1000000), 
+("PB002", "Lunas", "2026-08-15", 500000),
 ("PB003", "Lunas", "2026-08-16", 800000);
 
-INSERT INTO petugas(id_petugas, nama_petugas, alamat, no_telepon, jabatan) VALUES ("P001", "Heisenberg", "Jl. Merdeka No. 10, Jakarta", 081234987654, "Resepsionis"),
+INSERT INTO petugas(id_petugas, nama_petugas, alamat, no_telepon, jabatan) 
+VALUES ("P001", "Heisenberg", "Jl. Merdeka No. 10, Jakarta", 081234987654, "Resepsionis"),
 ("P002", "Sigma", "Jl. Mawar No. 5, Bandung", 082342015678, "Admin"),
 ("POO3", "Acar", "Jl. Daisy No. 23, Bandung", 089234156789, "Manager");
 
