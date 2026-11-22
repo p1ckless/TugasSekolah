@@ -1,5 +1,6 @@
 <?php
 require "koneksi.php";
+require "captcha.php";  
 
 if (isset($_SESSION["user_id"])) {
     header("Location: beranda.php");
@@ -15,19 +16,20 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $email    = trim($_POST["signup-email"]);
     $password = $_POST["signup-password"];
 
-    // 1. Validasi
-    if ($username === "" || $email === "" || $password === "") {
+    if (!cekCaptcha($_POST["captcha"] ?? "")) {
+      $error = "Jawaban captcha salah, coba lagi.";
+      } elseif ($username === "" || $email === "" || $password === "") {
         $error = "Semua kolom wajib diisi.";
-    } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+      } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
         $error = "Format email tidak valid.";
-    } elseif (strlen($password) < 6) {
+      } elseif (strlen($password) < 6) {
         $error = "Password minimal 6 karakter.";
-    } else {
+      } else {
         $stmt = $conn->prepare("SELECT id FROM users WHERE username = ? OR email = ?");
         $stmt->bind_param("ss", $username, $email);
         $stmt->execute();
         $stmt->store_result();
-
+        
         if ($stmt->num_rows > 0) {
             $error = "Username atau email sudah terdaftar.";
         } else {
@@ -42,6 +44,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         }
     }
 }
+$soal = buatCaptcha();
 ?>
 <!DOCTYPE html>
 <html lang="id">
@@ -89,6 +92,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
           <div class="form-group">
             <label for="signup-password">Password</label>
             <input type="password" id="signup-password" name="signup-password" placeholder="Create a password" required>
+          </div>
+
+          <div class="form-group">
+            <label for="captcha">Berapa <?= $soal ?> ?</label>
+            <input type="text" id="captcha" name="captcha" placeholder="Jawaban kamu" autocomplete="off" required>
           </div>
 
           <button type="submit" class="auth-submit">Sign Up</button>

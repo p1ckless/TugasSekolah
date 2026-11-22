@@ -1,4 +1,5 @@
 <?php
+require "captcha.php";
 require "koneksi.php";
 
 if (isset($_SESSION["user_id"])) {
@@ -13,7 +14,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $login    = trim($_POST["login-id"]);
     $password = $_POST["login-password"];
 
-    if ($login === "" || $password === "") {
+    if (!cekCaptcha($_POST["captcha"] ?? "")) {
+        $error = "Jawaban captcha salah, coba lagi.";
+    } elseif ($login === "" || $password === "") {
         $error = "Isi email/username dan password.";
     } else {
         $stmt = $conn->prepare("SELECT id, username, password FROM users WHERE email = ? OR username = ?");
@@ -21,19 +24,18 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $stmt->execute();
         $user = $stmt->get_result()->fetch_assoc();
 
-        // password_verify membandingkan password asli dengan hash di database
         if ($user && password_verify($password, $user["password"])) {
-            session_regenerate_id(true);           // keamanan: ganti ID sesi
+            session_regenerate_id(true);
             $_SESSION["user_id"]  = $user["id"];
             $_SESSION["username"] = $user["username"];
             header("Location: beranda.php");
             exit;
         } else {
-            // pesan sengaja dibuat umum, biar orang tidak bisa menebak akun mana yang ada
             $error = "Email/username atau password salah.";
         }
     }
 }
+$soal = buatCaptcha();
 ?>
 <!DOCTYPE html>
 <html lang="id">
@@ -65,6 +67,10 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
           <div class="alert alert-success">Akun berhasil dibuat, silakan Sign In.</div>
         <?php endif; ?>
 
+        <?php if (isset($_GET["reset"])): ?>
+          <div class="alert alert-success">Password berhasil diubah, silakan Sign In.</div>
+        <?php endif; ?>
+
         <?php if ($error): ?>
           <div class="alert alert-error"><?= htmlspecialchars($error) ?></div>
         <?php endif; ?>
@@ -80,6 +86,15 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             <label for="login-password">Password</label>
             <input type="password" id="login-password" name="login-password" placeholder="Enter your password" required>
           </div>
+
+          <div class="form-group">
+            <label for="captcha">Berapa <?= $soal ?> ?</label>
+            <input type="text" id="captcha" name="captcha" placeholder="Jawaban kamu" autocomplete="off" required>
+          </div>
+          
+          <p class="forgot-link">
+            <a href="lupa_password.php">Lupa password?</a>
+          </p>
 
           <button type="submit" class="auth-submit">Sign In</button>
         </form>
