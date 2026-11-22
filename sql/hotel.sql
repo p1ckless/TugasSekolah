@@ -72,3 +72,24 @@ VALUES
 
 SELECT id_reservasi, tanggal_check_in, tanggal_check_out, DATEDIFF(tanggal_check_out, tanggal_check_in) 
 AS lama_menginap FROM reservasi;
+
+ALTER TABLE reservasi ADD COLUMN id_tamu VARCHAR(10), ADD COLUMN no_kamar VARCHAR(10), ADD COLUMN id_petugas VARCHAR (10);
+ALTER TABLE pembayaran ADD COLUMN id_reservasi VARCHAR(10), ADD COLUMN id_petugas VARCHAR(10);
+
+-- Foregin Key untuk Reservasi
+ALTER TABLE reservasi ADD CONSTRAINT fk_reservasi_tamu FOREIGN KEY (id_tamu) REFERENCES tamu(id_tamu);
+ALTER TABLE reservasi ADD CONSTRAINT fk_reservasi_petugas FOREIGN KEY (id_petugas) REFERENCES petugas(id_petugas);
+ALTER TABLE reservasi ADD CONSTRAINT fk_reservasi_kamar FOREIGN KEY (no_kamar) REFERENCES kamar(no_kamar);
+
+-- Foregin Key untuk Pembayaran
+ALTER TABLE pembayaran ADD CONSTRAINT fk_pembayaran_petugas FOREIGN KEY (id_petugas) REFERENCES petugas(id_petugas);
+ALTER TABLE pembayaran ADD CONSTRAINT fk_pembayaran_reservasi FOREIGN KEY (id_reservasi) REFERENCES reservasi(id_reservasi);
+
+-- Update data insert yang Lama
+UPDATE reservasi SET id_tamu = 'T001', no_kamar = "K001", id_petugas = 'P001' WHERE id_reservasi = 'R001';
+UPDATE reservasi SET id_tamu = 'T002', no_kamar = "K002", id_petugas = 'P002' WHERE id_reservasi = 'R002';
+UPDATE reservasi SET id_tamu = 'T003', no_kamar = "K003", id_petugas = 'P003' WHERE id_reservasi = 'R003';
+
+UPDATE pembayaran SET id_reservasi = 'R001', id_petugas = 'P001' WHERE id_pembayaran = 'PB001';
+UPDATE pembayaran SET id_reservasi = 'R002', id_petugas = 'P002' WHERE id_pembayaran = 'PB002';
+UPDATE pembayaran SET id_reservasi = 'R003', id_petugas = 'P003' WHERE id_pembayaran = 'PB003';
