@@ -1,3 +1,5 @@
+-- Kode ini dibuat untuk menyempurnakan tugas pada LKM Basis Data
+-- studi kasus Hotel
 CREATE DATABASE IF NOT EXISTS db_hotel;
 USE db_hotel;
 
